@@ -1,6 +1,9 @@
 # capstonIBS
 
 <!-- badges: start -->
+[![Travis build status](https://travis-ci.com/BouranDS/My_Capstone.svg?branch=master)](https://travis-ci.com/BouranDS/My_Capstone)
+[![Travis build status](https://travis-ci.org/BouranDS/My_Capstone.svg?branch=master)](https://travis-ci.org/BouranDS/My_Capstone)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/BouranDS/My_Capstone?branch=master&svg=true)](https://ci.appveyor.com/project/BouranDS/My_Capstone)
 <!-- badges: end -->
 
 The goal of capstonIBS is to propose a handy set of functions to deal with the analysis of the NOAA data frame.
