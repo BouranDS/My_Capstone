@@ -19,3 +19,55 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(capstonIBS)
 ```
+
+# Function Create_date
+
+```{r echo=TRUE}
+## basic example code
+date_format <- Create_date(1984, 12, 11); print(date_format)
+date_format <- Create_date(1984, NA, NA); print(date_format)
+```
+
+# Function eq_clean_data
+```{r echo=TRUE}
+my_data <- data.frame(
+  YEAR = c("1984", "2000", "2014"),
+  MONTH = c("1", "2", "12"),
+  DAY = c("19", "20", "24"),
+  LONGITUDE = c("12.344", "14.89", "13.345"),
+  LATITUDE = c("-8.00", "-8.89", "-9.345")
+)
+data_cleanning <- eq_clean_data(my_data)
+print(data_cleanning)
+```
+# Function eq_location_clean 
+```{r echo=TRUE}
+my_data <- data.frame (LOCATION_NAME = c("Mali : bamako",
+                                          "Guinee : kankan",
+                                          "Mali : sikasso wassoulou" ))
+my_data <- eq_location_clean(my_data)
+print(my_data)
+```
+# Function remove_Country_name 
+```{r echo=TRUE}
+remove_Country_name(c("Mali:bamako", "Cote ivoire : man"))
+```      
+# Function eq_create_label
+```{r echo=TRUE}
+ my_data <- data.frame(
+                DEATHS = c(125, 12),
+                EQ_PRIMARY  = c(7.981792, 8.019300),
+                CLEAN_LOCATION_NAME = c("Bamako Coura", "Badialan")
+ )
+ my_data <- eq_create_label(my_data)
+ print(my_data)
+```
+# Function eq_map
+```{r echo=TRUE}
+mydata <- data.frame(
+ LONGITUDE = c(12.585080, 12.651165),
+ LATITUDE = c(-7.981792, -8.019300),
+ Annotation = c("Bamako Coura", "Badialan")
+ )
+eq_map(mydata, "Annotation")
+```
